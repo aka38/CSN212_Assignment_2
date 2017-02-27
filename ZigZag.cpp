@@ -42,7 +42,10 @@ int main()
                     dp[1][i]=max(dp[1][i],1+dp[0][j]);
             }
         }
-        cout<<"The maximum length of the zigzag array present in the given array is : "<<max(dp[0][n-1],dp[1][n-1])<<endl;
+        if(n==1)
+            cout<<1;
+        else
+        cout<<"The maximum length of the zigzag array present in the given array is : "<<max(dp[0][n-1],dp[1][n-1])+1<<endl;
     }
 }
 
